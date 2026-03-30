@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imagePreview.classList.remove('hidden');
 
         // Load image
-        mainImage.src = `img/${img.name}`;
+        mainImage.src = `Img/${img.name}`;
         currentImageName.textContent = img.name;
         
         // Format metadata
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentImageMeta.textContent = `Size: ${img.size} | Added: ${date}`;
         
         // Update download link
-        downloadBtn.href = `img/${img.name}`;
+        downloadBtn.href = `Img/${img.name}`;
     }
 
     // Search functionality

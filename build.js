@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const imgDir = path.join(__dirname, 'img');
+const imgDir = path.join(__dirname, 'Img');
 const outputFile = path.join(__dirname, 'images.json');
 
 if (!fs.existsSync(imgDir)) {
