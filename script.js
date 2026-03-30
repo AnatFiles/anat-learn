@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainImage = document.getElementById('mainImage');
     const currentImageName = document.getElementById('currentImageName');
     const currentImageMeta = document.getElementById('currentImageMeta');
-    const downloadBtn = document.getElementById('downloadBtn');
+
     const copyLinkBtn = document.getElementById('copyLinkBtn');
     const loader = document.getElementById('loader');
     const toast = document.getElementById('toast');
@@ -64,8 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const date = new Date(img.lastModified).toLocaleDateString();
         currentImageMeta.textContent = `Size: ${img.size} | Added: ${date}`;
         
-        // Update download link
-        downloadBtn.href = `Img/${img.name}`;
+
     }
 
     // Search functionality
