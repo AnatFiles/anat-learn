@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnatLearn Image Repository</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="A generic and high-performance image repository for AnatLearn students and researchers. Browse and preview histological and anatomical images with ease.">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for Image List -->
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h1>AnatLearn</h1>
+                <div class="search-wrapper">
+                    <input type="text" id="imageSearch" placeholder="Search images..." aria-label="Search images">
+                </div>
+            </header>
+            <nav class="image-list-container">
+                <ul id="imageList" class="image-list">
+                    <!-- Images will be injected here by script.js -->
+                </ul>
+            </nav>
+            <footer class="sidebar-footer">
+                <p id="imageCount">0 images found</p>
+            </footer>
+        </aside>
+
+        <!-- Main Preview Pane -->
+        <main class="preview-pane">
+            <div id="welcomeScreen" class="welcome-screen">
+                <div class="welcome-content">
+                    <svg class="welcome-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <h2>Welcome to the Repository</h2>
+                    <p>Select an image from the sidebar to view it in high resolution.</p>
+                </div>
+            </div>
+
+            <div id="imagePreview" class="preview-container hidden">
+                <div class="preview-header">
+                    <div class="image-info">
+                        <h2 id="currentImageName">Image Name</h2>
+                        <p id="currentImageMeta">Size: 0.0 MB | Modified: --</p>
+                    </div>
+                    <div class="preview-actions">
+                        <a id="downloadBtn" href="#" download class="btn-primary">Download</a>
+                        <button id="copyLinkBtn" class="btn-secondary">Copy Link</button>
+                    </div>
+                </div>
+                <div class="preview-content">
+                    <div class="image-frame">
+                        <img id="mainImage" src="" alt="Selected image">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loading Indicator -->
+        <div id="loader" class="loader-overlay">
+            <div class="spinner"></div>
+            <p>Loading Repository...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
